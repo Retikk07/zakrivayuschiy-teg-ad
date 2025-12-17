@@ -84,3 +84,35 @@
 .like-icon:not(.is-liked) .contour {
   transition: fill 0.1s linear;
 }
+
+.dialog__close-button,
+.card__like-button,
+.save__button {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.dialog__close-button::before,
+.card__like-button::before, 
+.save__button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dialog__close-button:hover::before,
+.card__like-button:hover::before,
+.save__button:hover::before {
+  transform: scaleX(1);
+}
+
+.dialog__close-button:focus,
+.card__like-button:focus, 
+.save__button:focus {
+  outline: none;
+  box-shadow: 2px 2px var(--accent-color);
+}
