@@ -271,6 +271,11 @@
     block-size: 28px;
   }
 
+  .dialog__icon {
+    inline-size: 39px;
+    block-size: 39px;
+  }
+
   .dialog[open] {
     inline-size: calc(337/375 * 100vw);
     padding: 26px 42px;
